@@ -14,9 +14,11 @@
 *.ept
 *.eide-template
 
-# toolchain & DFP pack (re-downloadable, see 鐜閰嶇疆鏁欑▼.md)
-/tools
+# toolchain & DFP pack (re-downloadable, see 环境配置教程.md)
 /.pack
+/tools/openocd-*
+/tools/**/*.exe
+/tools/**/*.pdb
 
 # temp files
 *readback.bin

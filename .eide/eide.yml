@@ -10,15 +10,15 @@ virtualFolder:
   folders:
     - name: User
       files:
-        - path: Src/main.c
-        - path: Src/py32f002b_it.c
-        - path: Src/system_py32f002b.c
-        - path: Src/led_port.c
-        - path: Src/led_map.c
-        - path: Src/led_matrix.c
-        - path: Src/sys_time.c
-        - path: Src/led_effect.c
-        - path: Src/proto.c
+        - path: app/main.c
+        - path: app/py32f002b_it.c
+        - path: app/system_py32f002b.c
+        - path: port/led_port.c
+        - path: core/led_map.c
+        - path: core/led_matrix.c
+        - path: port/sys_time.c
+        - path: core/led_effect.c
+        - path: core/proto.c
       folders: []
     - name: Startup
       files:
@@ -26,8 +26,8 @@ virtualFolder:
       folders: []
     - name: RS485
       files:
-        - path: rs485/rs485.c
-        - path: rs485/rs485_port.c
+        - path: core/rs485.c
+        - path: port/rs485_port.c
       folders: []
     - name: BSP
       files:
@@ -49,8 +49,9 @@ targets:
         - USE_FULL_LL_DRIVER
       incList:
         - .
-        - Inc
-        - rs485
+        - app
+        - core
+        - port
         - ../../PY32F002B_Firmware/Drivers/BSP/PY32F002Bxx_Start_Kit
         - ../../PY32F002B_Firmware/Drivers/CMSIS/Device/PY32F0xx/Include
         - ../../PY32F002B_Firmware/Drivers/CMSIS/Include
