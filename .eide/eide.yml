@@ -1,0 +1,124 @@
+version: "4.1"
+name: 49LED
+type: ARM
+deviceName: PY32F002BF15
+packDir: .pack/Puya/PY32F0xx_DFP.1.2.8
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: User
+      files:
+        - path: Src/main.c
+        - path: Src/py32f002b_it.c
+        - path: Src/system_py32f002b.c
+        - path: Src/led_port.c
+        - path: Src/led_map.c
+        - path: Src/led_matrix.c
+        - path: Src/sys_time.c
+        - path: Src/led_effect.c
+        - path: Src/proto.c
+      folders: []
+    - name: Startup
+      files:
+        - path: Startup/startup_py32f002bxx.s
+      folders: []
+    - name: RS485
+      files:
+        - path: rs485/rs485.c
+        - path: rs485/rs485_port.c
+      folders: []
+    - name: BSP
+      files:
+        - path: ../../PY32F002B_Firmware/Drivers/BSP/PY32F002Bxx_Start_Kit/py32f002bxx_ll_Start_Kit.c
+      folders: []
+    - name: PY32F002B_HAL_Driver
+      files:
+        - path: ../../PY32F002B_Firmware/Drivers/PY32F002B_HAL_Driver/Src/py32f002b_ll_utils.c
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 18d4fddda0355664799a56f49b5cf653
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList:
+        - PY32F002Bx5
+        - USE_FULL_LL_DRIVER
+      incList:
+        - .
+        - Inc
+        - rs485
+        - ../../PY32F002B_Firmware/Drivers/BSP/PY32F002Bxx_Start_Kit
+        - ../../PY32F002B_Firmware/Drivers/CMSIS/Device/PY32F0xx/Include
+        - ../../PY32F002B_Firmware/Drivers/CMSIS/Include
+        - ../../PY32F002B_Firmware/Drivers/PY32F002B_HAL_Driver/Inc
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: GCC
+    toolchainConfigMap:
+      GCC:
+        archExtensions: ""
+        cpuType: Cortex-M0+.small-multiply
+        floatingPointHardware: none
+        options:
+          version: 5
+          afterBuildTasks: []
+          asm-compiler:
+            ASM_FLAGS: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: ""
+            C_FLAGS: ""
+            language-c: c11
+            language-cpp: c++11
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-debug
+            warnings: all-warnings
+          global:
+            cpu-type: cortex-m0plus
+            floating-point-hardware: none
+            misc-control: --specs=nosys.specs --specs=nano.specs
+            output-debug-info: enable
+          linker:
+            LD_FLAGS: " "
+            LIB_FLAGS: -lm
+            output-format: elf
+            remove-unused-input-sections: true
+        scatterFilePath: c:/Users/Administrator/PY32_project/box_n49/49LED/Ld/py32f002bx5.ld
+        storageLayout:
+          RAM: []
+          ROM: []
+        useCustomScatterFile: true
+    uploadConfigMap:
+      Custom:
+        bin: ""
+        commandLine: ""
+        eraseChipCommand: ""
+      JLink:
+        baseAddr: "0x08000000"
+        bin: ""
+        cpuInfo:
+          cpuName: PY32F002Bx5
+          vendor: Puya
+        otherCmds: ""
+        proType: 1
+        speed: 1000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: py32f002b
+      pyOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        config: .eide/debug.pyocd.yaml
+        otherCmds: ""
+        speed: 4M
+        targetName: cortex_m
+    uploader: pyOCD

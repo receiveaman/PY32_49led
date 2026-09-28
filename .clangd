@@ -1,0 +1,19 @@
+CompileFlags:
+  Add:
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\riscv-none-embed\include\newlib-nano
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\riscv-none-embed\include\c++\8.3.0
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\riscv-none-embed\include\c++\8.3.0\riscv-none-embed\rv32imac\ilp32
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\riscv-none-embed\include\c++\8.3.0\backward
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\lib\gcc\riscv-none-embed\8.3.0\include
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\lib\gcc\riscv-none-embed\8.3.0\include-fixed
+    - -isystemc:\users\administrator\.eide\tools\gcc_riscv\riscv-none-embed\include
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\arm-none-eabi\include\newlib-nano
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1\arm-none-eabi\thumb\v6-m\nofp
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1\backward
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\15.2.1\include
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\15.2.1\include-fixed
+    - -isystemC:\Users\Administrator\.eide\tools\gcc_arm\arm-none-eabi\include
+  Remove: []
+  CompilationDatabase: ./build/Debug
+  Compiler: C:\Users\Administrator\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe
